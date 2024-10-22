@@ -8,4 +8,18 @@
         <item name="cornerRadius">10dp</item>
         <item name="backgroundTint">@color/white</item>
     </style>
+
+    <style name="Button2Style" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="strokeColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/light_blue</item>
+        <item name="colorOnSurface">@color/red</item>
+    </style>
 </resources>

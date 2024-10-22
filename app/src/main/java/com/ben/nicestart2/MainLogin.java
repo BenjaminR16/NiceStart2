@@ -30,5 +30,9 @@ public class MainLogin extends AppCompatActivity {
         Intent intent = new Intent(this, Signup.class);
         startActivity(intent);
     }
-
+    //Metodo para abrir la actividad Main
+    public void openMainActivity(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
