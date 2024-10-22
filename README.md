@@ -12,7 +12,7 @@ Este proyecto contiene tres actividades principales:
 ![LoginActivity](img/ActivityLogin.png)
 
 ### SignupActivity
-![SignupActivity](img/ActivitySignup.png)
+![SignupActivity](img/ActiitySignup.png)
 
 ### MainActivity
 ![MainActivity](img/ActivityMain.png)
