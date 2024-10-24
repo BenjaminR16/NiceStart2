@@ -7,9 +7,7 @@
 
     <style name="Theme.NiceStart2" parent="Base.Theme.NiceStart2" />
 
-    <style name="Base.Theme.NiceStart2.ActionBar" parent="Theme.Material3.DayNight">
-
-
+    <style name="Base.Theme.NiceStart2.ActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
 
     </style>
 

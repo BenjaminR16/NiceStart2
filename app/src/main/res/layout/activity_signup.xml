@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".MainLogin">
+    tools:context=".Signup">
 
-    <!--imagen de fondo -->
     <ImageView
         android:id="@+id/girl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitStart"
-        android:src="@drawable/girl"
+        android:src="@drawable/man"
+        android:alpha="0.4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
@@ -102,25 +102,51 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button1"
-        android:onClick="openMainActivity"
-        android:text="Login"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fiel3"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/fiel2"
+        app:startIconDrawable="@drawable/mail"
+        >
+
+        <EditText
+            android:id="@+id/mail"
+            android:layout_height="wrap_content"
+            android:layout_width="248dp"
+            android:background="@color/white"
+            android:alpha="0.6"
+            android:hint="e-mail"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:onClick="openMainActivity"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/fiel3"
 
         style="@style/Button1Style" />
 
     <Button
         android:id="@+id/button2"
         android:onClick="openSignup"
-        android:text="Signup"
+        android:text="Cancel"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/button1"
 
         style="@style/Button2Style" />
+
+
+
+
 
 
 
