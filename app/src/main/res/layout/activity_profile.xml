@@ -5,19 +5,86 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fotogradient"
     tools:context=".Profile">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20"
+        />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80"
+        />
+
+    <!--
+    <de.hdodenhof.circleimageview.CircleImageView
+
+         />
+         seguda forma de anadir la imagen circular solo que necesita un imagen en el drawable
+         y tambiena anadimos en el gradient la importacion:
+         implementation("de.hdodenhof:circleimageview:3.1.0") // Importación de CircleImageView
+    -->
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/circular_img"
+        android:id="@+id/profileImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+
+        />
+
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:text="Sofía Martínez"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/profileImageView"
+        />
+
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:text="Madrid, España"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/usernameTextView"
+        />
+
+    <!-- Descripción con texto justificado -->
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sofía es una joven de 24 años, una entusiasta y creativa, apasionada por el arte y la naturaleza. Desde pequeña, ha tenido un amor especial por la pintura y la fotografía, lo que la llevó a estudiar Bellas Artes en la universidad. Siempre lleva su cámara a todas partes, buscando capturar momentos únicos de la vida cotidiana."
+        android:textSize="15sp"
+        android:layout_marginTop="80dp"
+        android:padding="16dp"
+        android:gravity="start"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/locationTextView"
+        android:justificationMode="inter_word" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

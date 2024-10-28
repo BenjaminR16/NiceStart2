@@ -39,6 +39,8 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
 
+    implementation("de.hdodenhof:circleimageview:3.1.0") // Importación de CircleImageView
+
     // Dependencias de pruebas
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
