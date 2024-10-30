@@ -13,9 +13,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+
 public class Splash extends AppCompatActivity {
 
-    private ImageView logo;
+    private ImageView logo, ola;
 
 
     @Override
@@ -26,10 +29,20 @@ public class Splash extends AppCompatActivity {
 
         // Llama al método para abrir la aplicación
         openApp();
-
+        //animacion
         logo = findViewById(R.id.logosplash);
-        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.blink);
+
+        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.translacion);
+
         logo.startAnimation(myanim);
+
+        //Fondo ola
+        ola = findViewById(R.id.imagenola);
+        Glide.with(this)
+                .load("https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1482&q=80")
+                .transition(DrawableTransitionOptions.withCrossFade(600))
+                .centerCrop()
+                .into(ola);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
