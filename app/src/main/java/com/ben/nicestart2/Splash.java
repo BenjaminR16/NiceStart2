@@ -29,6 +29,8 @@ public class Splash extends AppCompatActivity {
 
         // Llama al método para abrir la aplicación
         openApp();
+
+
         //animacion
         logo = findViewById(R.id.logosplash);
 

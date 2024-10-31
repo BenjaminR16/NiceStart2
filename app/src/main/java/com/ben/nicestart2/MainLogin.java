@@ -51,7 +51,7 @@ public class MainLogin extends AppCompatActivity {
     }
     //Metodo para abrir la actividad Main
     public void openMainActivity(View view){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent);
     }
 }
