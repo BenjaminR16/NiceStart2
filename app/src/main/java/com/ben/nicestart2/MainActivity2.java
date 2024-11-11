@@ -1,6 +1,8 @@
 package com.ben.nicestart2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,5 +27,15 @@ public class MainActivity2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void backLogin(View view){
+        Intent intent = new Intent(this, MainLogin.class);
+        startActivity(intent);
+    }
+
+    public void goProfile(View view){
+        Intent intent = new Intent(this, Profile.class);
+        startActivity(intent);
     }
 }

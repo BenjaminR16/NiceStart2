@@ -20,7 +20,9 @@
             android:id="@+id/arrowback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow_back" />
+            android:src="@drawable/arrow_back"
+            android:onClick="backLogin"
+            />
 
         <TextView
             android:id="@+id/title_toolbar"
@@ -42,6 +44,7 @@
                 android:layout_height="28dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginRight="15dp"
+                android:onClick="goProfile"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/animperfil"
@@ -50,7 +53,6 @@
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

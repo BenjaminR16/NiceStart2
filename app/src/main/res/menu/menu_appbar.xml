@@ -3,14 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/item3"
-        android:title="Setting"
-        app:showAsAction="never"
-        />
-    <item
         android:id="@+id/item4"
         android:title="copy"
         android:icon="@drawable/mail"
         app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/item3"
+        android:title="Setting"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/signup"
+        android:title="SignUp"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/login"
+        android:title="Login"
+        app:showAsAction="never"
         />
 </menu>
