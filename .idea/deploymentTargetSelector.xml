@@ -11,13 +11,10 @@
       <SelectionState runConfigName="Profile">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="MainActivity2">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="MainVista">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="MainActivity">
+      <SelectionState runConfigName="MainActivityToolBar">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
