@@ -30,13 +30,11 @@ public class MainLogin extends AppCompatActivity {
 
 
         Glide.with(this)
-         //       .load("https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80")
+                //        .load("https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80")
                 .load(R.drawable.girl)
-                .transition(DrawableTransitionOptions.withCrossFade(500))
+                .transition(DrawableTransitionOptions.withCrossFade(600))
                 .centerCrop()
                 .into(mGirl);
-
-
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -53,7 +51,7 @@ public class MainLogin extends AppCompatActivity {
     }
     //Metodo para abrir la actividad Main
     public void openMainActivity(View view){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainVista.class);
         startActivity(intent);
     }
 }

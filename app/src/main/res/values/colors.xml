@@ -4,4 +4,6 @@
     <color name="red">#F23A4B</color>
     <color name="light_blue">#10DEF2</color>
     <color name="black">#000000</color>
+    <color name="blue">#182F57</color>
+    <color name="colorBar">#A63C58</color>
 </resources>

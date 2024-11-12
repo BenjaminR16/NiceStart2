@@ -33,18 +33,23 @@ android {
 }
 
 dependencies {
-    // Dependencias usando version catalogs (libs)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
 
-    // Dependencias de pruebas
+    // Lottie
+    implementation("com.airbnb.android:lottie:6.1.0")
+
+    // CircleImageView
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation(libs.swiperefreshlayout)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    // Glide (asegúrate de tener mavenCentral en tu settings.gradle.kts)
+    // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 }

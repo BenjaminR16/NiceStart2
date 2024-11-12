@@ -5,9 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@color/blue"
     tools:context=".Splash">
 
+    <ImageView
+        android:id="@+id/imagenola"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageView
         android:id="@+id/logosplash"
@@ -20,19 +27,18 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
 
-
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/aoboshi_one"
         android:text="Nice Start"
-        android:textSize="50sp"
         android:textColor="@color/white"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@id/logosplash"
         app:layout_constraintStart_toStartOf="@id/logosplash"
-        app:layout_constraintTop_toBottomOf="@id/logosplash"
 
-    />
+        app:layout_constraintTop_toBottomOf="@id/logosplash" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
