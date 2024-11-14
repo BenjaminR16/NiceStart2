@@ -8,17 +8,34 @@
     tools:context=".MainVista"
     >
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/myswipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/vistawebe"
+            >
+        </WebView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
     <TextView
-        android:id="@+id/vistaweb"
+        android:id="@+id/textovista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hola que haces?"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="712dp"
+        tools:ignore="MissingConstraints" />
+
 
     <!--mirar otra vez como se hace-->
 

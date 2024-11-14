@@ -6,6 +6,8 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,22 +18,39 @@ import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainVista extends AppCompatActivity {
 
-    private TextView mycontext;
 
+    private TextView mycontext;
+    //para el swipe
+    private SwipeRefreshLayout swipeLayout;
+    private WebView miVisorWeb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main_vista);
 
-        mycontext = findViewById(R.id.vistaweb);
+        mycontext = (TextView) findViewById(R.id.textovista);
         registerForContextMenu(mycontext);
 
+
+
+        // Inicializamos el swipe y le colocamos un listener
+        swipeLayout = (SwipeRefreshLayout) findViewById(R.id.myswipe);
+        swipeLayout.setOnRefreshListener(mOnRefreshListener);
+
+        //La vista dentro es un webview con permiso para zoom
+        miVisorWeb = (WebView) findViewById(R.id.vistawebe);
+
+        WebSettings webSettings = miVisorWeb.getSettings();
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+        miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
 
 
 
@@ -41,6 +60,23 @@ public class MainVista extends AppCompatActivity {
             return insets;
         });
     }
+
+    //funcionalidad del swipe
+    protected SwipeRefreshLayout.OnRefreshListener
+            mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            //Toast toast0 = Toast.makeText(MainVista.this, "Pagina refrescada", Toast.LENGTH_LONG);
+            //toast0.show();
+
+            Snackbar snackbar = Snackbar
+                    .make(findViewById(R.id.myMainConstraint), "Pagina refrescada", Snackbar.LENGTH_SHORT);
+            snackbar.show();
+
+            miVisorWeb.reload();
+            swipeLayout.setRefreshing(false);
+        }
+    };
 
     //menu desplegable
     @Override
@@ -137,5 +173,7 @@ public class MainVista extends AppCompatActivity {
     }
 
      */
+
+
 
 }
