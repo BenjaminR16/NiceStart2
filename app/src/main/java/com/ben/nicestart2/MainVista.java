@@ -1,5 +1,6 @@
 package com.ben.nicestart2;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
@@ -20,6 +22,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainVista extends AppCompatActivity {
@@ -60,6 +63,44 @@ public class MainVista extends AppCompatActivity {
             return insets;
         });
     }
+
+    //esta siendo llamado en los itemns del menu desplegable
+    public void showAlertDialogButtonClicked(MainVista mainActivity) {
+
+        // setup the alert builder
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+
+//        //el dialogo estandar tiene título/icono pero podemos sustituirlo por un XML a medida
+        builder.setTitle("Achtung!");
+        builder.setMessage("Where do you go?");
+        builder.setIcon(R.drawable.logout);
+        builder.setCancelable(false);
+
+        // un XML a medida para el diálogo se crea otro layout
+    //  builder.setView(getLayoutInflater().inflate(R.layout.alertdialog_view, null));
+
+        // add the buttons
+        builder.setPositiveButton("Scrolling", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // do something like...
+                Intent intent = new Intent(MainVista.this, MainLogin.class);
+                startActivity(intent);
+                dialog.dismiss();
+
+            }
+        });
+
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+
+
+
+
+
 
     //funcionalidad del swipe
     protected SwipeRefreshLayout.OnRefreshListener
@@ -152,6 +193,8 @@ public class MainVista extends AppCompatActivity {
         }else if(id == R.id.signup) {
             Intent intent = new Intent(this, Signup.class);
             startActivity(intent);
+        } else if (id == R.id.logout) {
+            showAlertDialogButtonClicked(MainVista.this); //llamada al dialogo alert
         }
 
         return super.onOptionsItemSelected(item);
