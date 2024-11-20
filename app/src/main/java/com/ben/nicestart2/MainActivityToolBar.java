@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -25,6 +26,13 @@ public class MainActivityToolBar extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main_tool_bar);
 
+        // Establecer el Toolbar como la ActionBar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // Registrar el menú contextual para un View específico (por ejemplo, textView)
+        View textView = findViewById(R.id.textView);
+        registerForContextMenu(textView);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -33,59 +41,20 @@ public class MainActivityToolBar extends AppCompatActivity {
         });
     }
 
-    //menu desplegable
+    // Declarar e inflar el menú de opciones del Toolbar
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View view, ContextMenu.ContextMenuInfo menuInfo){
-        getMenuInflater().inflate(R.menu.menu_context, menu);
-    }
-
-    //funcionalidad menu_context
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.item1) {
-            Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();
-            return true;
-        } else if (id == R.id.item2) {
-            Toast.makeText(this, "Dowloading Item...", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
-    /*
-        switch (item.getItemId()){
-            case R.id.item1:
-                Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();
-                return true;
-
-            case R.id.item2:
-                Toast.makeText(this, "Dowloading Item...", Toast.LENGTH_SHORT).show();
-                return true;
-
-            default:
-                return false;
-        }
-    */
-        return false;
-    }
-
-    //declara el menu desplegable
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_appbar, menu);
         return true;
     }
 
-    //funcionalidad menu_appbar
+    // Configurar la funcionalidad del menú de opciones
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.item4){
-            // Toast.makeText(this, "Infecting", Toast.LENGTH_SHORT).show();
-
-            final ConstraintLayout mLayout = findViewById(R.id.myMainConstraint);
-
+        if (id == R.id.item4) {
+            final ConstraintLayout mLayout = findViewById(R.id.main);
             Snackbar snackbar = Snackbar
                     .make(mLayout, "Fancy a snack while you refresh?", Snackbar.LENGTH_SHORT)
                     .setAction("Undo", new View.OnClickListener() {
@@ -95,20 +64,37 @@ public class MainActivityToolBar extends AppCompatActivity {
                             snackbar1.show();
                         }
                     });
-
-            snackbar.show(); //linea importante para que funcione
-
-        }else if(id == R.id.login){
-            Intent intent = new Intent(MainActivityToolBar.this, MainLogin.class);
-            startActivity(intent);
-        }else if(id == R.id.profile){
-            Intent intent = new Intent(this, Profile.class);
-            startActivity(intent);
-        }else if(id == R.id.signup) {
-            Intent intent = new Intent(this, Signup.class);
-            startActivity(intent);
+            snackbar.show();
+        } else if (id == R.id.login) {
+            startActivity(new Intent(this, MainLogin.class));
+        } else if (id == R.id.profile) {
+            startActivity(new Intent(this, Profile.class));
+        } else if (id == R.id.signup) {
+            startActivity(new Intent(this, Signup.class));
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    // Declarar e inflar el menú contextual
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View view, ContextMenu.ContextMenuInfo menuInfo) {
+        getMenuInflater().inflate(R.menu.menu_context, menu);
+    }
+
+    // Configurar la funcionalidad del menú contextual
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.item1) {
+            Toast.makeText(this, "Item copied", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (id == R.id.item2) {
+            Toast.makeText(this, "Downloading item...", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        return super.onContextItemSelected(item);
     }
 }

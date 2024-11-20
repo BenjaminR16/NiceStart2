@@ -41,6 +41,9 @@ dependencies {
     // Lottie
     implementation("com.airbnb.android:lottie:6.1.0")
 
+    //implementacion del swipe
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
     // CircleImageView
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation(libs.swiperefreshlayout)
