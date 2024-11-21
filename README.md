@@ -118,7 +118,7 @@ Además, el toolbar fue creado desde otro layout incluido con el atributo **incl
         - **Logout:** Muestra un **AlertDialog** para confirmar la acción.
 
 ### **Captura del Toolbar**
-![MainActivityTollBar - Toolbar](gif/toolbarActivity2.gift)
+![MainActivityTollBar - Toolbar](gif/toolbarActivity2.gif)
 
 ---
 ## **Profile**
