@@ -130,12 +130,12 @@ El **Profile** cuenta con una imagen de forma circular y cargada desde un **Glid
 ---
 
 ## **Vista general de funcionalidades**
-| Actividad          | Características principales                                        |
-|--------------------|--------------------------------------------------------------------|
-| **SplashActivity** | Animación de transición con diseño atractivo.                      |
-| **LoginActivity**  | Fondo dinámico, campos personalizados, y funcionalidad de login.   |
+| Actividad          | Características principales                                          |
+|--------------------|----------------------------------------------------------------------|
+| **SplashActivity** | Animación de transición con diseño atractivo.                        |
+| **LoginActivity**  | Fondo dinámico, campos personalizados, y funcionalidad de login.     |
 | **SignupActivity** | Diseño similar al login con campos adicionales y opciones de acción. |
 | **MainActivity**   | Toolbar dinámico, SnackBar, menú desplegable, y WebView interactivo. |
-|**MainActivityTollBar**| Toolbar incorporado desde otro layaou "include"                    |
+|**MainActivityTollBar**| Toolbar incorporado desde otro layaou "include".                     |
 
 
