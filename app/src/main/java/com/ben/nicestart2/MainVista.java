@@ -80,7 +80,7 @@ public class MainVista extends AppCompatActivity {
     //  builder.setView(getLayoutInflater().inflate(R.layout.alertdialog_view, null));
 
         // add the buttons
-        builder.setPositiveButton("Scrolling", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Back", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // do something like...
@@ -173,11 +173,11 @@ public class MainVista extends AppCompatActivity {
             final ConstraintLayout mLayout = findViewById(R.id.myMainConstraint);
 
             Snackbar snackbar = Snackbar
-                    .make(mLayout, "Fancy a snack while you refresh?", Snackbar.LENGTH_SHORT)
+                    .make(mLayout, "Enviar mensaje", Snackbar.LENGTH_SHORT)
                     .setAction("Undo", new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Snackbar snackbar1 = Snackbar.make(mLayout, "Action is restored!", Snackbar.LENGTH_SHORT);
+                            Snackbar snackbar1 = Snackbar.make(mLayout, "Mensaje cancelado", Snackbar.LENGTH_SHORT);
                             snackbar1.show();
                         }
                     });
