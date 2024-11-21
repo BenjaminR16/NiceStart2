@@ -1,32 +1,32 @@
 # Proyecto Android con Registro, Login y Main
 
-Este proyecto incluye cuatro actividades principales diseñadas para ofrecer una experiencia de usuario fluida y funcional:
+Este proyecto incluye cuatro actividades principales:
 
 - **SplashActivity**: Pantalla de introducción con animación de transición.
 - **LoginActivity**: Permite el inicio de sesión y la opción de registro.
 - **SignupActivity**: Contiene un formulario de registro y devuelve al usuario a LoginActivity o MainActivity.
 - **MainActivity**: Pantalla principal con un **Toolbar** que incluye íconos accionables, opciones de navegación y funcionalidades dinámicas.
-
+- **MainActivityTollBar**: Otra forma de incorporar **Toolbar** con animación importada de lotti.
 ---
 
 ## **SplashActivity**
 
-La **SplashActivity** muestra una animación de transición al iniciar la aplicación.  
-Esta animación, creada en XML, despliega un movimiento suave que presenta el logotipo o nombre de la aplicación.
+El **SplashActivity** muestra una animación de transición al iniciar la aplicación.  
+Esta animación, creada en XML, despliega un movimiento suave que presenta el logotipo de la aplicación.
 
 ### **Características**
-- **Tipo de animación:** Translación desde la parte inferior de la pantalla.
+- **Tipo de animación:** Translación desde el centro de la pantalla a la derecha.
 - **Duración:** 2 segundos.
 - **Diseño:** Minimalista, para captar la atención del usuario.
 
 ### **Vista previa de la animación**
-![Animación Splash](img/SplashAnimation.gif)
+![Animación Splash](gif/splash.gif)
 
 ---
 
 ## **LoginActivity**
 
-La **LoginActivity** permite al usuario iniciar sesión con un diseño moderno y funcional.
+El **LoginActivity** permite al usuario iniciar sesión con un diseño moderno y funcional.
 
 ### **Diseño**
 - **Fondo:** Gradiente con una imagen superpuesta que combina estética y funcionalidad.
@@ -35,8 +35,8 @@ La **LoginActivity** permite al usuario iniciar sesión con un diseño moderno y
     - El campo de contraseña tiene la opción **passwordToggleEnabled**, lo que permite mostrar u ocultar la contraseña.
 - **Botones:**
     - Personalizados con estilos únicos.
-    - El botón de "Login" redirige al usuario a la **MainActivity**.
-    - El botón "Sign Up" redirige a la **SignupActivity**.
+    - El botón de "Login" redirige al usuario al **MainActivity**.
+    - El botón "Sign Up" redirige al **SignupActivity**.
 
 ### **Captura de pantalla**
 ![LoginActivity](img/ActivityLogin.png)
@@ -45,26 +45,26 @@ La **LoginActivity** permite al usuario iniciar sesión con un diseño moderno y
 
 ## **SignupActivity**
 
-La **SignupActivity** utiliza un diseño similar al de la **LoginActivity**, con pequeños ajustes para optimizar el registro del usuario.
+La **SignupActivity** utiliza un diseño similar al del **LoginActivity**, con pequeños ajustes para optimizar el registro del usuario.
 
 ### **Características**
 - **Fondo:** Imagen con un atributo **alpha**, que reduce la opacidad y permite destacar los campos del formulario.
 - **Campos adicionales:** Se incluye un campo para el correo electrónico, además de los tradicionales.
 - **Botones:**
     - "Registrar" para completar el registro.
-    - "Cancelar" para volver a la **LoginActivity**.
+    - "Cancelar" para volver al **LoginActivity**.
 
 ### **Captura de pantalla**
-![SignupActivity](img/ActivitySignup.png)
+![SignupActivity](img/ActiitySignup.png)
 
 ---
 
 ## **MainActivity**
 
-La **MainActivity** es la pantalla principal de la aplicación, diseñada para ofrecer una experiencia dinámica e interactiva.
+El **MainActivity** es la pantalla principal de la aplicación, diseñada para ofrecer una experiencia dinámica e interactiva.
 
 ### **Características del Toolbar**
-1. **Nombre de la aplicación:** Mostrado al centro.
+1. **Nombre de la aplicación:** En la parte izquierda del toolbar.
 2. **Íconos de acción:**
     - **Icono de mensaje:** Muestra un **SnackBar** con el texto "Mensaje enviado". Al pulsar "Undo", cancela la acción.
     - **Menú desplegable:** Incluye opciones como:
@@ -74,14 +74,15 @@ La **MainActivity** es la pantalla principal de la aplicación, diseñada para o
         - **Logout:** Muestra un **AlertDialog** para confirmar la acción.
 
 ### **Captura del Toolbar con SnackBar y menú**
-![MainActivity - Toolbar](img/ToolbarMain.png)
+![MainActivity - Toolbar](img/ToolbarMensaje.png)
+
 
 ### **Contenido principal**
 - **WebView:** Carga imágenes desde Internet.
 - **SwipeRefreshLayout:** Permite al usuario actualizar el contenido del WebView deslizando hacia abajo.
 
 ### **Captura de WebView y SwipeRefreshLayout**
-![MainActivity - WebView](img/WebView.png)
+![MainActivity - WebView](gif/mainrefresh.gif)
 
 ---
 
@@ -95,6 +96,17 @@ La **MainActivity** es la pantalla principal de la aplicación, diseñada para o
     - Opción de cancelar → LoginActivity.
 - **MainActivity:**
     - Opción de cerrar sesión → LoginActivity.
+
+---
+
+## **MainActivityTollBar**
+
+
+
+
+
+
+
 
 ---
 
