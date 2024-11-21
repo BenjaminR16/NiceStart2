@@ -7,6 +7,8 @@ Este proyecto incluye cuatro actividades principales:
 - **SignupActivity**: Contiene un formulario de registro y devuelve al usuario a LoginActivity o MainActivity.
 - **MainActivity**: Pantalla principal con un **Toolbar** que incluye íconos accionables, opciones de navegación y funcionalidades dinámicas.
 - **MainActivityTollBar**: Otra forma de incorporar **Toolbar** con animación importada de lotti.
+- **Profile**: Perfil personal con imagen circular e incorporada con un **Glide**.
+
 ---
 
 ## **SplashActivity**
@@ -81,7 +83,7 @@ El **MainActivity** es la pantalla principal de la aplicación, diseñada para o
 - **WebView:** Carga imágenes desde Internet.
 - **SwipeRefreshLayout:** Permite al usuario actualizar el contenido del WebView deslizando hacia abajo.
 
-### **Captura de WebView y SwipeRefreshLayout**
+### **Gif de WebView y SwipeRefreshLayout**
 ![MainActivity - WebView](gif/mainrefresh.gif)
 
 ---
@@ -101,20 +103,39 @@ El **MainActivity** es la pantalla principal de la aplicación, diseñada para o
 
 ## **MainActivityTollBar**
 
+El **MainActivityTollBar** es una pantalla principal secundaria creada de forma distinta e incorpora una animacion **lotti** en el tollbar.
+Además, el toolbar fue creado desde otro layout incluido con el atributo **include** en el layout.
 
+### **Características del Toolbar**
+1. **Nombre de la aplicación:** En la parte izquierda del toolbar.
+2. **Íconos de acción:**
+    - **Icono de flecha:** Regresa al login. 
+    - **Icono de mensaje:** Muestra un **SnackBar** con el texto "Mensaje enviado". Al pulsar "Undo", cancela la acción.
+    - **Menú desplegable:** Incluye opciones como:
+        - **Perfil.**
+        - **Registro (SignupActivity).**
+        - **Login (LoginActivity).**
+        - **Logout:** Muestra un **AlertDialog** para confirmar la acción.
 
+### **Captura del Toolbar**
+![MainActivityTollBar - Toolbar](gif/toolbarActivity2.gif)
 
+---
+## **Profile**
 
+El **Profile** cuenta con una imagen de forma circular y cargada desde un **Glide**. Además tiene el texto justificado.
 
-
+![Profile](img/profile.png)
 
 ---
 
 ## **Vista general de funcionalidades**
-| Actividad         | Características principales                                           |
-|--------------------|----------------------------------------------------------------------|
-| **SplashActivity** | Animación de transición con diseño atractivo.                        |
+| Actividad          | Características principales                                         |
+|--------------------|---------------------------------------------------------------------|
+| **SplashActivity** | Animación de transición con diseño atractivo.                       |
 | **LoginActivity**  | Fondo dinámico, campos personalizados, y funcionalidad de login.    |
-| **SignupActivity** | Diseño similar al login con campos adicionales y opciones de acción.|
-| **MainActivity**   | Toolbar dinámico, SnackBar, menú desplegable, y WebView interactivo.|
+| **SignupActivity** | Diseño similar al login con campos adicionales y opciones de acción. |
+| **MainActivity**   | Toolbar dinámico, SnackBar, menú desplegable, y WebView interactivo. |
+|**MainActivityTollBar**| Toolbar incorporado desde otro layaou "include".                    |
+
 
