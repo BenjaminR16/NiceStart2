@@ -88,19 +88,6 @@ El **MainActivity** es la pantalla principal de la aplicación, diseñada para o
 
 ---
 
-## **Navegación entre actividades**
-- **SplashActivity** → LoginActivity.
-- **LoginActivity:**
-    - Si el inicio de sesión es exitoso → MainActivity.
-    - Opción de registro → SignupActivity.
-- **SignupActivity:**
-    - Si el registro es exitoso → MainActivity.
-    - Opción de cancelar → LoginActivity.
-- **MainActivity:**
-    - Opción de cerrar sesión → LoginActivity.
-
----
-
 ## **MainActivityTollBar**
 
 El **MainActivityTollBar** es una pantalla principal secundaria creada de forma distinta e incorpora una animacion **lotti** en el tollbar.
@@ -126,6 +113,22 @@ Además, el toolbar fue creado desde otro layout incluido con el atributo **incl
 El **Profile** cuenta con una imagen de forma circular y cargada desde un **Glide**. Además tiene el texto justificado.
 
 ![Profile](img/profile.png)
+
+
+---
+
+## **Navegación entre actividades**
+- **SplashActivity** → LoginActivity.
+- **LoginActivity:**
+    - Si el inicio de sesión es exitoso → MainActivity.
+    - Opción de registro → SignupActivity.
+- **SignupActivity:**
+    - Si el registro es exitoso → MainActivity.
+    - Opción de cancelar → LoginActivity.
+- **MainActivity:**
+    - Opción de cerrar sesión → LoginActivity.
+- **MainActivityTollBar:**
+    - Opcion volver al main principal. 
 
 ---
 
