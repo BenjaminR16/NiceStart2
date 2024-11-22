@@ -6,6 +6,7 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,18 +21,22 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivityToolBar extends AppCompatActivity {
 
+    private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main_tool_bar);
 
+        button = findViewById(R.id.button1);
+
         // Establecer el Toolbar como la ActionBar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // Registrar el menú contextual para un View específico (por ejemplo, textView)
-        View textView = findViewById(R.id.textView);
+        View textView = findViewById(R.id.texto);
         registerForContextMenu(textView);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -97,4 +102,12 @@ public class MainActivityToolBar extends AppCompatActivity {
 
         return super.onContextItemSelected(item);
     }
+
+
+    public void onClick(View view){
+        Intent intent = new Intent(this, MainVista.class);
+        startActivity(intent);
+
+    }
+
 }

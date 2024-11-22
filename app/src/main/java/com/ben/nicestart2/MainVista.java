@@ -195,6 +195,9 @@ public class MainVista extends AppCompatActivity {
             startActivity(intent);
         } else if (id == R.id.logout) {
             showAlertDialogButtonClicked(MainVista.this); //llamada al dialogo alert
+        }else if(id == R.id.item3){
+            Intent intent = new Intent(this, MainActivityToolBar.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
