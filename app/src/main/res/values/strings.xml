@@ -3,5 +3,7 @@
     <string name="user" translatable="false">Usuario</string>
     <string name="password" translatable="false">Contraseña</string>
     <string name="mail" translatable="false">mail</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

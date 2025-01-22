@@ -98,10 +98,6 @@ public class MainVista extends AppCompatActivity {
 
 
 
-
-
-
-
     //funcionalidad del swipe
     protected SwipeRefreshLayout.OnRefreshListener
             mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
