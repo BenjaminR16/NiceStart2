@@ -17,7 +17,7 @@
       <SelectionState runConfigName="MainBab">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="Main_Bn">
+      <SelectionState runConfigName="MainButtonBar">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

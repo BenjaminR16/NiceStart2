@@ -58,8 +58,7 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
     //botton navigation
-    implementation ("com.google.android.material:material:1.9.0")
-    implementation ("androidx.appcompat:appcompat:1.5.0")
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.navigation:navigation-fragment:2.6.0")
+    implementation("androidx.navigation:navigation-ui:2.6.0")
 
 }
